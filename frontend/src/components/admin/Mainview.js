@@ -33,13 +33,9 @@ const Mainview = ({todoView}) => {
             setRowSize(ysize[newSize]);
             setWidthSize(xsize[newSize])
         }
-        console.log(rowSize);
-        console.log(widthSize);
     }
 
     const handleResize = (size) => {
-        console.log("tulee");
-        console.log(size);
         if (size === 'smaller') {
             makeSmaller();
         } else {

@@ -60,7 +60,6 @@ router.post(
             }
 
         }  catch(err) {
-            console.log("tis fjadskfjdsa")
             if(err.code === "23503") {
                 return sendErrorResponse(res, 404, 'notFound', "Classroom not found");
             }

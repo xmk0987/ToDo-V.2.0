@@ -8,8 +8,6 @@ const handleValidationErrors = (res, errors) => {
 
 
 const sendErrorResponse = (res, status, errorKey, errorMessage) => {
-  console.log("Tullaa tä nne ");
-  console.log(errorMessage);
     return res.status(status).json({
       error: {
         [errorKey]: errorMessage,

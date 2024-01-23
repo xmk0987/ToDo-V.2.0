@@ -94,7 +94,6 @@ module.exports = class Todo {
         [todo.position, todo2.todo_id]
       );
 
-      console.log("valmis");
       return;
 
     } catch (error) {

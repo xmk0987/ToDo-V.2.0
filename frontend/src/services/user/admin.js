@@ -1,16 +1,16 @@
 import axios from 'axios';
 import { CustomError } from '../../utils/errors';
 
-
 const login = async (loginName, password, BASE_URL) => {
   try {
-    const { data, status } = await axios.post(`${BASE_URL}/login`, { loginName, password }, {
+    const response = await axios.post(`${BASE_URL}/login`, { loginName, password }, {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (status !== 200) {
-      const errorMessage = data.message && (Array.isArray(data.message) ? data.message[0].msg : data.message) || 'Request failed';
-      throw new CustomError(errorMessage, status);
+    const data = response.data;
+
+    if (response.status !== 200) {
+      throw new CustomError("log in failed");
     }
 
     const localStorageItems = {
@@ -25,7 +25,9 @@ const login = async (loginName, password, BASE_URL) => {
     }
 
   } catch (error) {
-    throw new CustomError(`${error.message}`);
+    console.error(error);
+
+    throw new CustomError(`${error.response.data.message}`);
   }
 };
 
@@ -55,10 +57,15 @@ const signup = async (username, email, password, BASE_URL) => {
     return data.message;
 
   } catch (error) {
-    throw new CustomError(`${error.message}`);
+    if (error.response.data.message) {
+      throw new CustomError(`${error.response.data.message}`);
+
+    } else {
+      throw new CustomError(`${error}`);
+
+    }
   }
 };
-
 
 const deleteUser = async (baseURL, token, username) => {
   try {
@@ -68,7 +75,7 @@ const deleteUser = async (baseURL, token, username) => {
       },
     });
 
-    if (response.status !== 204) {
+    if (response.status !== 200) {
       throw new CustomError(`HTTP error! Status: ${response.status}`);
     }
 
@@ -78,5 +85,6 @@ const deleteUser = async (baseURL, token, username) => {
     throw new CustomError(`${err.message}`);
   }
 };
+
 
 export { deleteUser, signup, login };

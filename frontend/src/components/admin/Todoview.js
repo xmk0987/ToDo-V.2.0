@@ -5,10 +5,10 @@ import { useShareContext } from "../../utils/providers/ShareContext";
 import { useBaseUrl } from "../../utils/providers/urlprovider";
 
 import { getClasses } from "../../services/admin/class";
-
+import { formattedDate } from "../../utils/helperFunctions";
 import TodoCard from "../todo/TodoCard";
 
-const Todoview = ({rowSize, widthSize}) => {
+const Todoview = ({rowSize, widthSize, search}) => {
     const { activeClassroom } = useActiveClassroom();
     const {activeShareClass} = useShareContext();
     const [ classes, setClasses ] = useState([]);
@@ -28,25 +28,27 @@ const Todoview = ({rowSize, widthSize}) => {
     useEffect(() => {
         const fetchClasses = () => {
             getAllClasses()
-          };
-        
-          fetchClasses();
+        };
+    
+        fetchClasses();
 
-          const handleClassCreated = () => {
-            getAllClasses();
-          };
+        document.addEventListener("classCreated", fetchClasses);
 
-          document.addEventListener("classCreated", handleClassCreated);
-
-          return () => {
-            document.removeEventListener("classCreated", handleClassCreated);
-          };
+        return () => {
+            document.removeEventListener("classCreated", fetchClasses);
+        };
 
     }, [activeClassroom, baseURL, setClasses, token, getAllClasses, activeShareClass]); 
 
+
+    const newList = classes.filter((classItem) => {
+        return classItem.name.toLowerCase().includes(search) || formattedDate(classItem.date_created).includes(search);
+    });
+    
+
     return (
         <div className={`todo-view-container ${rowSize} ${widthSize}`}>
-            {classes.map((classItem) => (
+            {newList.map((classItem) => (
                 <div key={classItem.class_id} className="full-container">
                     <TodoCard cardItem={classItem} getAllClasses={getAllClasses} widthSize={widthSize}/>
                 </div>

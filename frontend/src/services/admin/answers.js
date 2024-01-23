@@ -72,7 +72,6 @@ const updateAnswer = async (baseURL, token, todo_id, answer) => {
 };
 
 const deleteAnswer = async (baseURL, token, todo_id) => {
-  console.log("pitäisi poistaa");
   try {
     const response = await axios.delete(`${baseURL}/deleteanswer`, {
       headers: {

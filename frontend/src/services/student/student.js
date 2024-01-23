@@ -26,7 +26,6 @@ const studentLogin = async  (baseURL, classroom_name, username) => {
       
   } 
   catch (error) {
-    console.log(error);
       throw new CustomError(`${error.message}`);
   }
 }

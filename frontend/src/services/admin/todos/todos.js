@@ -127,7 +127,6 @@ const addTodo = async (baseURL, token, class_id, content) => {
 }
 
 const updatePosition = async (baseURL, token, todo, todo2) => {
-  console.log("lähtee");
   try {
     const response = await axios.put(`${baseURL}/swapposition`, {
       todo: todo,
