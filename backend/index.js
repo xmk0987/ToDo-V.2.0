@@ -10,11 +10,9 @@ const PORT = process.env.PORT || 8888;
 const allowedMethods = ['PUT', 'DELETE', 'GET', 'POST', 'OPTIONS'];
 
 const corsOptions = {
-  origin:'*',
+  origin: process.env.ORIGIN || "https://todo-ekwu.onrender.com",
   methods: allowedMethods.join(','),
 };
-
-//process.env.ORIGIN || "https://todo-ekwu.onrender.com"
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
