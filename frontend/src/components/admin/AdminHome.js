@@ -13,6 +13,7 @@ import '../../styles/todo.css'
 const AdminHome = () => {
     const initialTodoViewState = JSON.parse(localStorage.getItem('todoView'));
     const [todoView, setTodoView] = useState(initialTodoViewState);
+    const [showSidebar, setShowSidebar] = useState(true);
 
     const toggleView = () => {
         setTodoView(!todoView);
@@ -20,11 +21,13 @@ const AdminHome = () => {
     };
 
     return (
-        <div className='home-container full-container'>
+        <div className='home-container full-container relative'>
+            <button className='sidebar-menu-button' onClick={() => setShowSidebar(!showSidebar)}><ion-icon name="menu-outline"></ion-icon></button>
             <Mainview todoView={todoView} />
-            <Sidebar toggleView={toggleView} 
-                    todoView={todoView} 
-            />
+            {showSidebar ? <Sidebar toggleView={toggleView} 
+                    todoView={todoView}/>  
+            : null}
+            
         </div>
     );
 }

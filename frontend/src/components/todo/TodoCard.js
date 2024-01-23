@@ -93,7 +93,7 @@ const TodoCard = ({ cardItem, getAllClasses, shareView = false, widthSize }) => 
         </div>
       ) : (
         <div className="card-options">
-          <p className="second-header flex-center">Admin</p>
+          <p className="third-header flex-center">Admin</p>
         </div>
       )}
     </div>

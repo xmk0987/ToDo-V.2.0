@@ -87,7 +87,7 @@ const Sidebar = ({todoView, toggleView}) => {
 
     return (
         <div className="sidebar-container flex-center-column">
-            <div className="sidebar-header-container flex-center full-width">
+            <div className="sidebar-header-container flex-center full-width relative">
                 <h1 className="header scroll">{activeClassroom.classroom_name}</h1>
             </div>
             <div className="sidebar-content-container full-container">
@@ -158,9 +158,9 @@ const SidebarButtons = ({toggleView, fetchClassrooms,
     return (
         <div className='full-container'>
             <div className="first-options">
-                <SidebarOption text={"Add Todo"} handleAction={addTodo}/>
+                {todoView ? <SidebarOption text={"Add Todo"} handleAction={addTodo}/> : null}
                 <SidebarOption text={"Members"} handleAction={showMembers}/>
-                <SidebarOption text={todoView ? "Group View" : "ToDo View"} handleAction={toggleGroupView}/>
+                <SidebarOption text={todoView ? "Group View" : "ToDo View"} handleAction={toggleGroupView} color='make-blue'/>
                 <SidebarOption text={"Groups"} handleAction={showGroups}/>
             </div>
             <div className="second-options flex-center-column">

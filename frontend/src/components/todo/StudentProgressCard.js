@@ -56,7 +56,7 @@ const StudentProgressCard = ({student, sharedClass, widthSize}) => {
     return (
         <div className={`todo-card full-container ${checkForEmpty() ? ('secondary-color') : areAllTodosCompleted() ? 'make-green' : 'make-red'}`}>
             <div className="card-header">
-                <h2 className="second-header">{student.username}</h2>
+                <h2 className="second-header scroll">{student.username}</h2>
             </div>
             <div className={`${widthSize === 'smallestCol' ? 'card-body-numbers' : 'card-body'} scroll`}>
                 {todos && sortedTodos.map((todo) => (
@@ -64,7 +64,7 @@ const StudentProgressCard = ({student, sharedClass, widthSize}) => {
                 ))}
             </div>
             <div className="card-options">
-                <p className="second-header flex-center">
+                <p className="third-header flex-center">
                     {checkForEmpty() ? ('Nothing ToDo') : areAllTodosCompleted() ? 'Done' : 'Not done'}
                 </p>
             </div>

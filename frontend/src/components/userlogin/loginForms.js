@@ -36,7 +36,7 @@ const StudentLogin = ({handleHovering, handleLoginState}) => {
     };
 
     return (
-        <div className="flex-center-column full-container form-container"  onMouseLeave={handleHovering}>
+        <div className="flex-center-column full-container"  onMouseLeave={handleHovering}>
             <h1 className="header">Member</h1>
             <Message message={message} isError={isError} clearMessage={clearMessage}/>
             <form className="full-width flex-center-column" onSubmit={handleLogin}>

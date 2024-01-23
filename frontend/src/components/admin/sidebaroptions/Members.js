@@ -18,7 +18,7 @@ const Members = ({goBack, students, handleDeleteStudent}) => {
             <div className="flex-just-center-column padding-top first-options">
                 {allStudents !== null && allStudents.map((student) => (
                     <div key={student.username} className="sidebar-option-button flex-inline primary-color flex-center">
-                        <p className="name-container">{student.name} - {student.username}</p>
+                        <p className="name-container scroll">{student.name} - {student.username}</p>
                         <button className="delete-button flex-center" onClick={() => handleDelete(student.username)}>
                             <ion-icon name="trash-outline"></ion-icon>
                         </button>

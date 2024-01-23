@@ -4,7 +4,7 @@
     --header-font: "Irish Grover";
     --text-font: "Inter";
     --basic-border: 3px solid black;
-    --basic-margin: 1rem;
+    --basic-margin: 0.8rem;
     --input-background: white;
     --basic-shadow: 0 3px 4px 5px rgba(0, 0, 0, 0.3);
   }
@@ -84,6 +84,15 @@
   .second-header {
     font-family: var(--header-font);
     font-size: 2rem;
+    padding:0 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .third-header {
+    font-family: var(--header-font);
+    font-size: 1rem;
     padding:0 1rem;
     width: 100%;
     text-align: center;

@@ -45,8 +45,8 @@
     background-color: transparent;
     position: absolute;
     transform: translate(0, 20%);
-    right: 5px;
-    z-index: 15;
+    left: 5px;
+    z-index: 25;
 }
 
 .search ion-icon {
@@ -58,7 +58,9 @@
     height: 40px;
     transform: translate(0, 20%);
     top: 0;
-    right: 45px;
+    left: 5px;
+    width: 150px;
+    z-index: 20;
     font-size: 1rem;
     margin-top:0;
 }
