@@ -1,0 +1,38 @@
+:root{
+    --primary-color: #C9FFFC;
+    --secondary-color: #A2DEF1;
+    --text-color: black;
+    --left-login: #C9FFFC;
+    --right-login: #A2DEF1;
+}
+
+
+.primary-color {
+    background-color: var(--primary-color);
+}
+
+.secondary-color {
+    background-color: var(--secondary-color);
+}
+
+.make-green {
+    background-color: #00ec92;
+}
+
+.make-red {
+    background-color: #ff5d5d;
+}
+
+.make-yellow {
+    background-color: #f1f18b;
+}
+
+.error-message {
+    color: #ff5d5d;
+    font-weight: 600;
+}
+
+.success-message {
+    color: #017e10;
+    font-weight: 600;
+}

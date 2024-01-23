@@ -1,0 +1,81 @@
+
+.home-container {
+    display: inline-flex;
+    height: 100%;
+}
+
+/* TODO VIEW */
+
+.todo-view-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5rem;
+    overflow: scroll;
+    display: grid;
+    gap: 2rem;
+    overflow: scroll;
+    justify-content: space-around; 
+    padding: 2rem;
+}
+
+.show-card{
+  flex: 2;
+  position: sticky;
+  height: 400px;
+  margin-top: 2rem;
+  
+}
+
+.todo-view-container2 {
+  flex: 4;
+  width: 80%;
+  height: 100%;
+  margin-top: 0.5rem;
+  overflow: scroll;
+  display: grid;
+  gap: 2rem;
+  overflow: scroll;
+  justify-content: space-around; 
+  padding: 2rem;
+  background-color: red;
+}
+
+.smallestCol {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  }
+  
+  .smallerCol {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+  }
+  
+  .mediumCol {
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr)); 
+  }
+  
+  
+  .largestCol {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); 
+  }
+  
+  
+  .smallestRow {
+    grid-auto-rows: 30%; 
+  }
+  
+  .smallerRow {
+    grid-auto-rows: 40%; 
+  }
+  
+  .mediumRow {
+    grid-auto-rows: 50%; 
+  }
+  
+  
+  .largestRow {
+    grid-auto-rows: 100%; 
+  }
+  
+
+  .absolute {
+    position: absolute;
+  }

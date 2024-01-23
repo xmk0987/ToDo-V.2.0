@@ -1,0 +1,46 @@
+
+
+.student-card-container {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 900px;
+    border: var(--basic-border);
+}
+
+.student-card-header {
+    flex: 1;
+    border-bottom: var(--basic-border);
+    gap: 0.5rem;
+}
+
+.student-card-body {
+    flex: 6;
+}
+
+.check-mark ion-icon {
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+
+.student-logout {
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.student-logout ion-icon {
+    font-size: 2rem;
+}
+
+.refresh-loc {
+    transform: translate(-150%, 0);
+}
+
+
+.student-todo:hover {
+    cursor: pointer;
+}
