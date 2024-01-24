@@ -18,6 +18,10 @@
     padding: 2rem;
 } 
 
+.todo-view-container::-webkit-scrollbar {
+  display:none;
+}
+
 .smallestCol {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
   }

@@ -55,7 +55,7 @@ const AddNewClassroom = ({pushNew, usePushNew}) => {
     };
 
     return (
-        <div className="flex-center-column">
+        <div className="flex-center-column full-container">
             <Message message={message} isError={isError} clearMessage={clearMessage}/>
             <input
                 value={classroomTitle} 

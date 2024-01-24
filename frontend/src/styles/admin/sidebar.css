@@ -47,7 +47,6 @@
     justify-content: flex-end;
     padding-bottom: 1rem;
     overflow: scroll;
-    min-height: 350px;
 }
 
 .sidebar-option-button {
@@ -118,7 +117,7 @@
     right: 5px;
     border:none;
     background-color: transparent;
-    z-index: 20;
+    z-index: 35;
 
 }
 

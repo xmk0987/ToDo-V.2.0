@@ -128,3 +128,12 @@
     display:inline-flex; 
  }
 
+
+ .text-center {
+  text-align: center;
+ }
+
+
+ .display-none {
+  display:none;
+}

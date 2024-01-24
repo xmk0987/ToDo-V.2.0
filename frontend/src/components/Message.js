@@ -17,7 +17,7 @@ const Message = ({message, isError, clearMessage}) => {
     }
 
     return (
-        <div className="padding">
+        <div className="padding text-center">
             <p className={`${isError ? "error-message" : "success-message"}`}>{message}</p>
         </div>
     );

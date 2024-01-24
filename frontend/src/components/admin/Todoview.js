@@ -49,7 +49,7 @@ const Todoview = ({rowSize, widthSize, search}) => {
     return (
         <div className={`todo-view-container ${rowSize} ${widthSize}`}>
             {newList.map((classItem) => (
-                <div key={classItem.class_id} className="full-container">
+                <div key={classItem.class_id} className="full-container flex-center">
                     <TodoCard cardItem={classItem} getAllClasses={getAllClasses} widthSize={widthSize}/>
                 </div>
             ))}
