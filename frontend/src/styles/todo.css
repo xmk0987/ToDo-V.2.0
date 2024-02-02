@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     border: var(--basic-border);
+    background-color: var(--card-color);
+    border-radius: 20px;
+    
 }
 
 .card-header {
@@ -11,6 +14,9 @@
     flex-direction: column;
     align-items: center;
     border-bottom: var(--basic-border);
+    border-top-right-radius: 20px;
+
+    
 }
 
 .card-body {
@@ -37,7 +43,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 55px;
+    max-height: 50px;
 }
 
 .draggable {
@@ -45,7 +51,7 @@
 }
 
 .drag-over {
-    border: 5px solid blue;
+    border: 5px solid var();
 }
 
 .todo-card-option {
@@ -53,7 +59,7 @@
 }
 
 .todo-card-option ion-icon{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .min-single-todo {
@@ -112,7 +118,7 @@
     height: 100%;
     width: 100%;
     padding-right: 5px;
-    background-color: var(--primary-color);
+    background-color: var(--card-color);
 
 }
 
@@ -137,6 +143,7 @@
     height: 100%;
     width: 50%;
     min-width: 0;
+    border-bottom-left-radius: 40px;
 }
 
 .todo-input {
