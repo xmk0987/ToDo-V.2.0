@@ -58,7 +58,7 @@ const TodoCard = ({ cardItem, getAllClasses, shareView = false, widthSize }) => 
 
   
   return (
-    <div className="full-container todo-card">
+    <div className="full-container todo-card basic-shadow">
       <div className="card-header">
         <h2 className="second-header scroll">{cardItem.name}</h2>
         <p>{formattedDate(cardItem.date_created)}</p>

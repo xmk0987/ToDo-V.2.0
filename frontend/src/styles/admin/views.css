@@ -13,7 +13,6 @@
     overflow: scroll;
     display: grid;
     gap: 2rem;
-    overflow: scroll;
     justify-content: space-around; 
     padding: 2rem;
 } 
@@ -34,11 +33,9 @@
     grid-template-columns: repeat(auto-fill, minmax(550px, 1fr)); 
   }
   
-  
   .largestCol {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); 
   }
-  
   
   .smallestRow {
     grid-auto-rows: 30%; 
@@ -52,12 +49,10 @@
     grid-auto-rows: 50%; 
   }
   
-  
   .largestRow {
     grid-auto-rows: 100%; 
   }
   
-
   .absolute {
     position: absolute;
   }

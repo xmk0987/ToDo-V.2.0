@@ -54,7 +54,7 @@ const StudentProgressCard = ({student, sharedClass, widthSize}) => {
     }
 
     return (
-        <div className={`todo-card full-container ${checkForEmpty() ? ('secondary-color') : areAllTodosCompleted() ? 'make-green' : 'make-red'}`}>
+        <div className={`todo-card full-container basic-shadow ${checkForEmpty() ? ('secondary-color') : areAllTodosCompleted() ? 'make-green' : 'make-red'}`}>
             <div className="card-header">
                 <h2 className="second-header scroll">{student.username}</h2>
             </div>

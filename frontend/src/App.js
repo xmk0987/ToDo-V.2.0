@@ -16,9 +16,9 @@ import './styles/color.css';
 import './styles/phone.css';
 
 function App() {
-  //const BASE_FETCH_URL = "http://localhost:8888";
+  const BASE_FETCH_URL = "http://localhost:8888";
  
-  const BASE_FETCH_URL = "https://todo-6fsq.onrender.com";
+  //const BASE_FETCH_URL = "https://todo-6fsq.onrender.com";
   const { activeRoute, setActiveRoute } = useActiveRoute();
 
   const navigate = useNavigate();

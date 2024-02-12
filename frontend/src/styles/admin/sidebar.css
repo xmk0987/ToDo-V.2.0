@@ -2,7 +2,7 @@
 /* SIDEBAR */
 
 .sidebar-container {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-left: var(--basic-border);
     min-width: 350px;
     height: 100%;
@@ -33,6 +33,7 @@
     min-height: 200px;
     justify-content: flex-end;
     padding-bottom: 1rem;
+
 }
 
 .first-options2 {
@@ -68,6 +69,7 @@
 .sidebar-input {
     height: 50px;
     width: 70%;
+    max-width: 300px;
     min-width: 0;
     font-size: 1.2rem;
 }
@@ -107,9 +109,7 @@
 .change-classroom:hover {
     opacity: 0.5;
     cursor: pointer;
-
 }   
-
 
 .sidebar-menu-button {
     position: absolute;

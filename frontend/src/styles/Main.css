@@ -1,12 +1,24 @@
 
 :root{
-    --font-size: 24px;
-    --header-font: "Irish Grover";
-    --text-font: "Inter";
-    --basic-border: 3px solid black;
+    --font-size: 20px;
+    --basic-border: 2px solid white;
     --basic-margin: 0.8rem;
     --input-background: white;
+    --header-font: "Irish Grover";
+    --text-font: "Marmelad";
+    --input-background: white;
     --basic-shadow: 0 3px 4px 5px rgba(0, 0, 0, 0.3);
+    --border-radius: 20px;
+    --text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+    --xl-font-size : 3rem;
+    --l-font-size: 2rem;
+    --m-font-size: 1.5rem;
+    --s-font-size: 1.25rem;
   }
   
   *{
@@ -30,7 +42,7 @@
   }
 
   body {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
   }
 
   .full-container {
@@ -44,6 +56,10 @@
 
   .full-height {
     height: 100%;
+  }
+
+  .basic-shadow {
+    box-shadow: var(--basic-shadow);
   }
 
   .relative {

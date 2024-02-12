@@ -88,7 +88,7 @@ const Sidebar = ({todoView, toggleView}) => {
     return (
         <div className="sidebar-container flex-center-column">
             <div className="sidebar-header-container flex-center full-width relative">
-                <h1 className="header scroll">{activeClassroom.classroom_name}</h1>
+                <h1 className="header scroll ">{activeClassroom.classroom_name}</h1>
             </div>
             <div className="sidebar-content-container full-container">
                 {currentComponent === 'sidebar-options' ? 
@@ -171,7 +171,7 @@ const SidebarButtons = ({toggleView, fetchClassrooms,
     );
 }
 
-export const SidebarOption = ({text, handleAction, color='primary-color'}) => {
+export const SidebarOption = ({text, handleAction, color='button-color'}) => {
     return (
         <div className="flex-center full-width">
             <button className={`sidebar-option-button ${color}`} onClick={handleAction}>{text}</button>

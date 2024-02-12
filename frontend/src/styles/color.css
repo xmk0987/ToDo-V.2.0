@@ -1,8 +1,15 @@
 :root{
-    --primary-color: #C9FFFC;
-    --secondary-color: #A2DEF1;
-    --text-color: black;
-    --left-login: #C9FFFC;
+    --background-color: #FFE3EA;
+    --primary-color: #F699B0;
+    --secondary-color: #BCE4FE;
+    --button-color: #F05B7F;
+    --text-color: white;
+    --main-header-color: #358BC3;
+    --secondary-header-color: #D7357D;
+    --input-background-color: #F6F6F6;
+
+
+    --left-login: var(--primary-color);
     --right-login: #A2DEF1;
     --card-color: rgb(236, 236, 234);
 }
@@ -16,12 +23,16 @@
     background-color: var(--secondary-color);
 }
 
-.make-green {
-    background-color: #00ec92;
+.button-color {
+    background-color: var(--button-color);
+}
+
+.make-blue {
+    background-color: var(--main-header-color);
 }
 
 .make-red {
-    background-color: #ff5d5d;
+    background-color: var(--button-color);
 }
 
 .make-yellow {
@@ -38,7 +49,3 @@
     font-weight: 600;
 }
 
-
-.make-blue {
-    background-color: aqua;
-}
